@@ -2,7 +2,7 @@ import pytest
 from unittest.mock import MagicMock
 import os
 import json
-import requests  # Eksikti, eklendi
+import requests 
 
 # Adjust the path to import the module from the src directory
 import sys
