@@ -22,14 +22,9 @@ resource "aws_s3_bucket" "data_bucket" {
   }
 }
 
-resource "aws_s3_object" "temp_folder" {
+resource "aws_s3_object" "raw_data" {
   bucket  = aws_s3_bucket.data_bucket.id
   key     = "temp/"
   content = ""
 }
 
-resource "aws_s3_object" "permanent_folder" {
-  bucket  = aws_s3_bucket.data_bucket.id
-  key     = "permanent/"
-  content = ""
-}
