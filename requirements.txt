@@ -1,0 +1,17 @@
+
+boto3
+requests
+pandas== 2.0.0
+
+pyspark
+
+psycopg2-binary
+
+
+apache-airflow==2.7.1
+
+pytest
+
+ipykernel
+
+pytest-mock
