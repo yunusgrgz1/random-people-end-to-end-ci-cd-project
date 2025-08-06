@@ -3,6 +3,7 @@ import logging
 import requests
 import boto3
 import os
+from datetime import datetime
 
 # Configure logging
 logging.basicConfig(
@@ -40,7 +41,7 @@ def upload_to_s3(data):
         )
         s3.put_object(
             Bucket=os.getenv("S3_BUCKET_NAME"),
-            Key="raw_data/people_data.json",
+            Key=f"raw_data/people_data{datetime.now()}.json",
             Body=data_json_str,
             ContentType='application/json'
         )
